@@ -1,0 +1,11 @@
+.content{
+  &__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 250px;
+    margin-bottom: 25px;
+    color: white;
+  }
+}

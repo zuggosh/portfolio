@@ -1,2 +1,22 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.css";
+.header{
+  margin-bottom: 25px;
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: black;
+    color: white;
+  }
+}
+
+.footer{
+  &__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 150px;
+    color: white;
+  }
+}

@@ -1,20 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { MusicComponent } from './music/music.component';
+import { MenuComponent } from './menu/menu.component';
+
+const appRoutes: Routes = [
+    { path: '', component: MenuComponent },
+    { path: 'about-me', component: AboutMeComponent },
+    { path: 'music', component: MusicComponent },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ContentComponent,
-    FooterComponent
+    AboutMeComponent,
+    MusicComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
