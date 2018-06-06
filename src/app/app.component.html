@@ -6,7 +6,30 @@
     </div>
 </div>
 
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <nav class="nav">
+                <a class="nav__block" routerLink="/" routerLinkActive="active">
+                    ABOUT ME
+                </a>
+                <a class="nav__block" routerLink="/news">
+                    NEWS
+                </a>
+                <a class="nav__block" routerLink="/music">
+                    MUSIC
+                </a>
+                <a class="nav__block">
+                    WEATHER
+                </a>
+            </nav>
+
+        </div>
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
 
 <div class="footer">
     <div class="container">

@@ -1,0 +1,17 @@
+.aboutMe{
+  margin-bottom: 50px;
+  &__photo{
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  &__desc{
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+}
+
+//554d9aa5103d42e6a2360610deca0601

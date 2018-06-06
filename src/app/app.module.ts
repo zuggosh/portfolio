@@ -5,12 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MusicComponent } from './music/music.component';
-import { MenuComponent } from './menu/menu.component';
+import { NewsComponent } from './news/news.component';
 
 const appRoutes: Routes = [
-    { path: '', component: MenuComponent },
-    { path: 'about-me', component: AboutMeComponent },
+    { path: '', component: AboutMeComponent },
     { path: 'music', component: MusicComponent },
+    { path: 'news', component: NewsComponent}
 ];
 
 @NgModule({
@@ -18,7 +18,7 @@ const appRoutes: Routes = [
     AppComponent,
     AboutMeComponent,
     MusicComponent,
-    MenuComponent
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

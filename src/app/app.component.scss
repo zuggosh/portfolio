@@ -10,6 +10,16 @@
   }
 }
 
+.nav{
+  display: flex;
+  flex-direction: column;
+  &__block{
+    background-color: black;
+    height: 100px;
+    margin-bottom: 25px;
+  }
+}
+
 .footer{
   &__block{
     display: flex;
