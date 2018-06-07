@@ -6,12 +6,18 @@
       <h4 class="pressProof__title">{{pressProof.title}}</h4>
       <p class="pressProof__description">{{pressProof.description}}</p>
       news works!
-      <div>{{pressProof.publishedAt}}</div>
-      <div>{{pressProof.source.name}}</div>
+      <div class="pressProof__publishedAt">{{pressProof.publishedAt}}</div>
+      <div class="pressProof__magazine">{{pressProof.source.name}}</div>
 
-      <div><img src="{{pressProof.urlToImage}}" alt=""></div>
-      <div>{{pressProof.author}}</div>
-      <div>{{pressProof.publishedAt}}</div>
+      <div class="pressProof__imgWrapper">
+        <img class="pressProof__img" src="{{pressProof.urlToImage}}" alt="">
+      </div>
+      <div class="pressProof__author">{{pressProof.author}}</div>
+      <div class="pressProof__linkWrap">
+        <a href="{{pressProof.url}}" class="pressProof__link">
+          read more...
+        </a>
+      </div>
 
 
     </div>
