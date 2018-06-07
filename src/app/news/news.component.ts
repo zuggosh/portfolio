@@ -16,11 +16,10 @@ export class NewsComponent implements OnInit {
   }
 
   showConfig() {
-    this.newsService.getConfig()
-        .subscribe((data: News) => this.news = {
-            heroesUrl: data['heroesUrl'],
-            textfile:  data['textfile']
+    this.newsService.getPressProof()
+        .subscribe((data: News) => {
+            this.news = data;
+            console.log(this.news);
         });
-    console.log(this.news);
   }
 }

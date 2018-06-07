@@ -1,4 +1,19 @@
-<p>
-  {{news.heroesUrl}}
-  news works!
-</p>
+<div class="news">
+  <div class="news__wrapper"
+       *ngIf="news">
+    <div class="pressProof"
+         *ngFor="let pressProof of news.articles">
+      <h4 class="pressProof__title">{{pressProof.title}}</h4>
+      <p class="pressProof__description">{{pressProof.description}}</p>
+      news works!
+      <div>{{pressProof.publishedAt}}</div>
+      <div>{{pressProof.source.name}}</div>
+
+      <div><img src="{{pressProof.urlToImage}}" alt=""></div>
+      <div>{{pressProof.author}}</div>
+      <div>{{pressProof.publishedAt}}</div>
+
+
+    </div>
+  </div>
+</div>
