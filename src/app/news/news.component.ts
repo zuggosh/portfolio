@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { News, NewsService } from '../service/news/news.service';
+import { News, NewsAssets, NewsService } from '../service/news/news.service';
 
 @Component({
   selector: 'app-news',
@@ -7,19 +7,41 @@ import { News, NewsService } from '../service/news/news.service';
   styleUrls: ['./news.component.scss'],
   providers: [NewsService]
 })
+
 export class NewsComponent implements OnInit {
-  news: News;
+  private newsAssets: NewsAssets;
+  private news: News;
+  private country = 'us';
+  private category = 'business';
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
-    this.showConfig();
+    this.showNewsAssets();
+    this.showPressProof(this.country, this.category);
   }
 
-  showConfig() {
-    this.newsService.getPressProof()
+  changePressProofCountry(countryCode) {
+    this.country = countryCode.value;
+    this.showPressProof(this.country, this.category);
+  }
+  changePressProofCategory(category) {
+      this.category = category;
+      this.showPressProof(this.country, this.category);
+  }
+
+  showPressProof(countryCode, category) {
+    this.newsService.getPressProof(countryCode, category)
         .subscribe((data: News) => {
             this.news = data;
-            console.log(this.news);
         });
   }
+
+  showNewsAssets() {
+    this.newsService.getNewsAssets()
+      .subscribe((data: NewsAssets) => {
+          this.newsAssets = data;
+      });
+  }
+
+
 }

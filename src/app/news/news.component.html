@@ -1,4 +1,25 @@
 <div class="news">
+  <div class="news__bar"
+       *ngIf="newsAssets">
+      <select  (change)="changePressProofCountry($event.target)"
+               class="news__select">
+        <option class="news__option"
+                *ngFor="let country of newsAssets.countries"
+                [selected]="country.code == 'us'"
+                value="{{country.code}}">
+          {{country.country}}
+        </option>
+      </select>
+      <div>
+        <ul>
+          <li *ngFor="let category of newsAssets.categories"
+              (click)="changePressProofCategory(category)">
+            {{category}}
+          </li>
+        </ul>
+      </div>
+  </div>
+
   <div class="news__wrapper"
        *ngIf="news">
     <div class="pressProof"
@@ -14,12 +35,10 @@
       </div>
       <div class="pressProof__author">{{pressProof.author}}</div>
       <div class="pressProof__linkWrap">
-        <a href="{{pressProof.url}}" class="pressProof__link">
+        <a href="{{pressProof.url}}" target="_blank" class="pressProof__link">
           read more...
         </a>
       </div>
-
-
     </div>
   </div>
 </div>

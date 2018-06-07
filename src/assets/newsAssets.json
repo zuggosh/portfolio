@@ -1,0 +1,226 @@
+{
+  "categories": [
+    "business",
+    "entertainment",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology"
+  ],
+  "countries": [
+    {
+      "country": "United Arab Emirates",
+      "code": "ae"
+    },
+    {
+      "country": "Argentina",
+      "code": "ar"
+    },
+    {
+      "country": "Austria",
+      "code": "at"
+    },
+    {
+      "country": "Australia",
+      "code": "au"
+    },
+    {
+      "country": "Belgium",
+      "code": "be"
+    },
+    {
+      "country": "Bulgaria",
+      "code": "bg"
+    },
+    {
+      "country": "Brazil",
+      "code": "br"
+    },
+    {
+      "country": "Canada",
+      "code": "ca"
+    },
+    {
+      "country": "Switzerland",
+      "code": "ch"
+    },
+    {
+      "country": "China",
+      "code": "cn"
+    },
+    {
+      "country": "Colombia",
+      "code": "co"
+    },
+    {
+      "country": "Czechia",
+      "code": "cz"
+    },
+    {
+      "country": "Germany",
+      "code": "de"
+    },
+    {
+      "country": "Egypt",
+      "code": "eg"
+    },
+    {
+      "country": "France",
+      "code": "fr"
+    },
+    {
+      "country": "United Kingdom",
+      "code": "gb"
+    },
+    {
+      "country": "Greece",
+      "code": "gr"
+    },
+    {
+      "country": "Hong Kong",
+      "code": "hk"
+    },
+    {
+      "country": "Hungary",
+      "code": "hu"
+    },
+    {
+      "country": "Indonesia",
+      "code": "id"
+    },
+    {
+      "country": "Ireland",
+      "code": "ie"
+    },
+    {
+      "country": "Israel",
+      "code": "il"
+    },
+    {
+      "country": "India",
+      "code": "in"
+    },
+    {
+      "country": "Italy",
+      "code": "it"
+    },
+    {
+      "country": "Japan",
+      "code": "jp"
+    },
+    {
+      "country": "Korea (Republic of)",
+      "code": "kr"
+    },
+    {
+      "country": "Lithuania",
+      "code": "lt"
+    },
+    {
+      "country": "Latvia",
+      "code": "lv"
+    },
+    {
+      "country": "Morocco",
+      "code": "ma"
+    },
+    {
+      "country": "Mexico",
+      "code": "mx"
+    },
+    {
+      "country": "Malaysia",
+      "code": "my"
+    },
+    {
+      "country": "Nigeria",
+      "code": "ng"
+    },
+    {
+      "country": "Netherlands",
+      "code": "nl"
+    },
+    {
+      "country": "Norway",
+      "code": "no"
+    },
+    {
+      "country": "New Zealand",
+      "code": "nz"
+    },
+    {
+      "country": "Philippines",
+      "code": "ph"
+    },
+    {
+      "country": "Poland",
+      "code": "pl"
+    },
+    {
+      "country": "Portugal",
+      "code": "pt"
+    },
+    {
+      "country": "Romania",
+      "code": "ro"
+    },
+    {
+      "country": "Serbia",
+      "code": "rs"
+    },
+    {
+      "country": "Russian Federation",
+      "code": "ru"
+    },
+    {
+      "country": "Saudi Arabia",
+      "code": "sa"
+    },
+    {
+      "country": "Sweden",
+      "code": "se"
+    },
+    {
+      "country": "Singapore",
+      "code": "sg"
+    },
+    {
+      "country": "Slovenia",
+      "code": "si"
+    },
+    {
+      "country": "Slovakia",
+      "code": "sk"
+    },
+    {
+      "country": "Thailand",
+      "code": "th"
+    },
+    {
+      "country": "Turkey",
+      "code": "tr"
+    },
+    {
+      "country": "Taiwan, Province of China[a]",
+      "code": "tw"
+    },
+    {
+      "country": "Ukraine",
+      "code": "ua"
+    },
+    {
+      "country": "United States of America",
+      "code": "us"
+    },
+    {
+      "country": "Venezuela (Bolivarian Republic of)",
+      "code": "ve"
+    },
+    {
+      "country": "South Africa",
+      "code": "za"
+    }
+  ]
+}
