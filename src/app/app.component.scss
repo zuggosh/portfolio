@@ -16,9 +16,22 @@
   display: flex;
   flex-direction: column;
   &__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $black;
-    height: 100px;
+    height: 120px;
+    width: 120px;
     margin-bottom: 25px;
+    color: $greyLight;
+    border-bottom: 3px solid $addColor;
+    transition: color 0.2s ease;
+    &:hover{
+      color: $white;
+    }
+    &.nav__block--active{
+      color: $accentColor;
+    }
   }
 }
 

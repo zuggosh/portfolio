@@ -35,12 +35,12 @@
   &__categoryItem{
     position: relative;
     display: block;
-    color: $grey;
+    color: $greyLight;
     cursor: pointer;
     text-transform: capitalize;
+    transition: color 0.2s ease;
     &:hover{
-      color: $greyLight;
-      transition: all 0.2s ease;
+      color: $white;
       &:after{
         content: '';
         width: 100%;

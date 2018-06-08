@@ -11,13 +11,20 @@
         <div class="row">
             <div class="col-md-2">
                 <nav class="nav">
-                    <a class="nav__block" routerLink="/" routerLinkActive="active">
+                    <a class="nav__block"
+                       routerLink="/"
+                       [ngClass]="{'nav__block--active' : routerLinkActive}"
+                       routerLinkActive="active">
                         ABOUT ME
                     </a>
-                    <a class="nav__block" routerLink="/news">
+                    <a class="nav__block"
+                       [ngClass]="{'nav__block--active' : routerLinkActive}"
+                       routerLink="/news">
                         NEWS
                     </a>
-                    <a class="nav__block" routerLink="/music">
+                    <a class="nav__block"
+                       [ngClass]="{'nav__block--active' : routerLinkActive}"
+                       routerLink="/music">
                         MUSIC
                     </a>
                     <a class="nav__block">
