@@ -6,7 +6,7 @@ export interface News {
 }
 
 export interface NewsAssets {
-
+    categories: any;
 }
 
 @Injectable({

@@ -1,12 +1,33 @@
 {
   "categories": [
-    "general",
-    "business",
-    "entertainment",
-    "health",
-    "science",
-    "sports",
-    "technology"
+    {
+      "title": "general",
+      "active": true
+    },
+    {
+      "title": "business",
+      "active": false
+    },
+    {
+      "title": "entertainment",
+      "active": false
+    },
+    {
+      "title": "health",
+      "active": false
+    },
+    {
+      "title": "science",
+      "active": false
+    },
+    {
+      "title": "sports",
+      "active": false
+    },
+    {
+      "title": "technology",
+      "active": false
+    }
   ],
   "countries": [
     {

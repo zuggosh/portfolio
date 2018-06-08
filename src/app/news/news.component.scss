@@ -4,14 +4,25 @@
   &__bar{
 
   }
+  &__inputsWrap{
+    margin-bottom: 25px;
+  }
   &__select{
-
+    width: 100%;
+    background-color: $greyDark;
+    padding: 3px 25px 3px 10px;
+    border-radius: 3px;
+    border: 1px solid $grey;
+    color: $accentColor;
+    &:focus{
+      outline: none;
+    }
   }
   &__option{
 
   }
   &__categoryWrap{
-
+    margin-bottom: 25px;
   }
   &__categoryList{
     display: flex;
@@ -22,45 +33,89 @@
     margin: 0;
   }
   &__categoryItem{
+    position: relative;
+    display: block;
+    color: $grey;
     cursor: pointer;
+    text-transform: capitalize;
+    &:hover{
+      color: $greyLight;
+      transition: all 0.2s ease;
+      &:after{
+        content: '';
+        width: 100%;
+        position: absolute;
+        border-bottom: $addColor 1px solid;
+      }
+    }
+    &.news__categoryItem--active{
+      color: $accentColor;
+    }
   }
   &__inputWrap{
-
+    position: relative;
   }
   &__input{
-
+    width: 100%;
+    height: 30px;
+    padding: 3px 25px 3px 10px;
+    border-radius: 3px;
+    border: 1px solid $grey;
+    background-color: $greyDark;
+    color: $accentColor;
+    &:focus{
+      outline: none;
+    }
   }
   &__wrapper{
-
+    margin-bottom: 50px;
   }
 }
 
 .pressProof{
+  margin-bottom: 65px;
   &__title{
-
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 8px;
   }
   &__description{
-
+    font-size: 16px;
+    color: $greyLight;
+    text-align: justify;
   }
   &__publishedAt{
-
+    color: $greyLight;
+    font-size: 11px;
+    font-style: italic;
   }
   &__magazine{
-
+    color: $greyLight;
   }
   &__imgWrapper{
-
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
   &__img{
-
+    width: 100%;
   }
   &__author{
-
+    color: $greyLight;
+    font-size: 11px;
+    font-style: italic;
+    clear: both;
   }
-  &__linkWrap{
-
+  &__footerWrap{
+    display: flex;
+    justify-content: space-between;
+    clear: both;
   }
   &__link{
-
+    color: $accentColor;
   }
 }
