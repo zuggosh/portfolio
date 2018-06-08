@@ -1,6 +1,17 @@
 <div class="news">
   <div class="news__bar"
        *ngIf="newsAssets">
+
+      <div class="news__categoryWrap">
+        <ul class="news__categoryList">
+          <li *ngFor="let category of newsAssets.categories"
+              class="news__categoryItem"
+              (click)="changePressProofCategory(category)">
+            {{category}}
+          </li>
+        </ul>
+      </div>
+
       <select  (change)="changePressProofCountry($event.target)"
                class="news__select">
         <option class="news__option"
@@ -10,14 +21,11 @@
           {{country.country}}
         </option>
       </select>
-      <div>
-        <ul>
-          <li *ngFor="let category of newsAssets.categories"
-              (click)="changePressProofCategory(category)">
-            {{category}}
-          </li>
-        </ul>
+
+      <div class="news__inputWrap">
+        <input class="news__input" (keyup)="querySearchRequest.next($event.target.value)" type="text">
       </div>
+
   </div>
 
   <div class="news__wrapper"

@@ -1,0 +1,66 @@
+@import "../variable";
+
+.news{
+  &__bar{
+
+  }
+  &__select{
+
+  }
+  &__option{
+
+  }
+  &__categoryWrap{
+
+  }
+  &__categoryList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__categoryItem{
+    cursor: pointer;
+  }
+  &__inputWrap{
+
+  }
+  &__input{
+
+  }
+  &__wrapper{
+
+  }
+}
+
+.pressProof{
+  &__title{
+
+  }
+  &__description{
+
+  }
+  &__publishedAt{
+
+  }
+  &__magazine{
+
+  }
+  &__imgWrapper{
+
+  }
+  &__img{
+
+  }
+  &__author{
+
+  }
+  &__linkWrap{
+
+  }
+  &__link{
+
+  }
+}

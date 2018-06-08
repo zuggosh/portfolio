@@ -17,8 +17,8 @@ export class NewsService {
     publicKey = '554d9aa5103d42e6a2360610deca0601';
     newsUrl;
     constructor(private http: HttpClient) { }
-    getPressProof(countryCode: string, category: string) {
-        this.newsUrl = `https://newsapi.org/v2/top-headlines?country=${countryCode}&category=${category}&apiKey=${this.publicKey}`;
+    getPressProof(countryCode: string, category: string, querySearch: string) {
+        this.newsUrl = `https://newsapi.org/v2/top-headlines?country=${countryCode}&category=${category}${querySearch}&pageSize=100&apiKey=${this.publicKey}`;
         return this.http.get(this.newsUrl);
     }
     getNewsAssets() {
