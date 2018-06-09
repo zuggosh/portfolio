@@ -1,22 +1,21 @@
-<div class="aboutMe">
+<div id="aboutMe" class="aboutMe">
 
-  <ul class="aboutMe__navList">
+  <ul id="aboutMeNav" class="aboutMe__navList">
     <li class="aboutMe__navItem">
-      <a href="#biography" class="aboutMe__navLink"></a>
+      <a (click)="slideToElement('biography')" class="aboutMe__navLink"></a>
       <span class="aboutMe__navTitle">biography</span>
     </li>
     <li class="aboutMe__navItem">
-      <a href="#skills" class="aboutMe__navLink"></a>
+      <a (click)="slideToElement('skills')" class="aboutMe__navLink"></a>
       <span class="aboutMe__navTitle">skills</span>
-
     </li>
     <li class="aboutMe__navItem">
-      <a href="#carrier" class="aboutMe__navLink"></a>
+      <a (click)="slideToElement('carrier')" class="aboutMe__navLink"></a>
       <span class="aboutMe__navTitle">carrier</span>
     </li>
 
     <li class="aboutMe__navItem">
-      <a href="#language" class="aboutMe__navLink"></a>
+      <a (click)="slideToElement('language')" class="aboutMe__navLink"></a>
       <span class="aboutMe__navTitle">language</span>
     </li>
   </ul>

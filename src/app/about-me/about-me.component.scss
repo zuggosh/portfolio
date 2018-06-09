@@ -5,8 +5,10 @@
   margin-bottom: 50px;
   color: $greyLight;
   margin-right: 50px;
+  font-size: 18px;
   &__navList{
     position: absolute;
+    top: 65px;
     right: -15px;
     padding: 0;
     margin: 0;
@@ -14,6 +16,9 @@
   }
   &__navItem{
     position: relative;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 20px;
     &:hover{
       .aboutMe__navTitle{
         opacity: 1;
@@ -31,6 +36,7 @@
     margin-bottom: 15px;
     background-color: $accentColor;
     transition: background-color 0.2s ease;
+    cursor: pointer;
     &:hover{
       background-color: $addColor;
     }
@@ -70,14 +76,19 @@
   &__title{
     display: inline-block;
     color: $white;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 15px;
     padding: 0 25px 2px 5px;
     border-bottom: 1px solid $addColor;
   }
   &__desc{
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     text-align: justify;
+  }
+  &__time{
+    font-style: italic;
+    font-size: 16px;
+    color: $white;
   }
 }
 
