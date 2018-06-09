@@ -17,8 +17,9 @@
   flex-direction: column;
   &__block{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $black;
     height: 120px;
     width: 120px;
@@ -28,10 +29,22 @@
     transition: color 0.2s ease;
     &:hover{
       color: $white;
+      text-decoration: none;
+      .nav__capital{
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
     }
     &.nav__block--active{
       color: $accentColor;
     }
+  }
+  &__capital{
+    font-size: 58px;
+    text-transform: capitalize;
+    transition: transform 0.4s ease;
+  }
+  &__title{
+    margin-bottom: 10px;
   }
 }
 

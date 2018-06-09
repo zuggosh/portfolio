@@ -11,7 +11,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsService } from './service/news/news.service';
 
 const appRoutes: Routes = [
-    { path: 'about-me', component: AboutMeComponent },
+    { path: '', component: AboutMeComponent },
     { path: 'music', component: MusicComponent },
     { path: 'news', component: NewsComponent}
 ];
