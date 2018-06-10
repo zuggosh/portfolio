@@ -12,11 +12,11 @@ import {debounceTime} from 'rxjs/operators';
 })
 
 export class NewsComponent implements OnInit {
-  private newsAssets: NewsAssets;
-  private news: News;
-  private country = 'us';
-  private category = 'general';
-  private querySearch = '';
+  newsAssets: NewsAssets;
+  news: News;
+  country = 'us';
+  category = 'general';
+  querySearch = '';
   querySearchRequest = new Subject();
   constructor(private newsService: NewsService) { }
 
