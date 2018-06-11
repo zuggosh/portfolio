@@ -1,6 +1,7 @@
 @import "../variable";
 
 .news{
+  padding-right: 25px;
   &__bar{
 
   }
@@ -83,6 +84,8 @@
     font-size: 16px;
     color: $greyLight;
     text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__publishedAt{
     color: $greyLight;
