@@ -2,10 +2,10 @@
 
 .aboutMe{
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   color: $greyLight;
-  margin-right: 50px;
-  font-size: 18px;
+  margin-right: 65px;
+  font-size: 14px;
   &__navList{
     position: absolute;
     top: 65px;
@@ -61,11 +61,12 @@
     align-items: center;
     justify-content: center;
     float: left;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     background-color: black;
     margin-right: 15px;
     margin-bottom: 15px;
+    margin-top: 15px;
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid $addColor;
@@ -76,7 +77,7 @@
   &__title{
     display: inline-block;
     color: $white;
-    font-size: 25px;
+    font-size: 22px;
     margin-left: 15px;
     padding: 0 25px 2px 5px;
     border-bottom: 1px solid $addColor;

@@ -13,7 +13,7 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit() {
   }
-  @HostListener("window:scroll", ['$event'])
+  /*@HostListener("window:scroll", ['$event'])
   onWindowScroll() {
       let topBuffet = 0;
       const el = document.getElementById('aboutMeNav');
@@ -22,7 +22,7 @@ export class AboutMeComponent implements OnInit {
           topBuffet = 50;
           el.style.top = Math.abs(aboutMe) + topBuffet + 'px';
       }
-  }
+  }*/
   slideToElement(element) {
     document.getElementById(element).scrollIntoView({behavior: "smooth"});
   }

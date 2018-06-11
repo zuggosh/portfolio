@@ -1,7 +1,9 @@
 <div class="header">
     <div class="container">
-        <div class="header__content">
-            HEADER
+        <div class="header__contentWrap">
+            <div class="header__content">
+                HEADER
+            </div>
         </div>
     </div>
 </div>
@@ -39,7 +41,9 @@
 
             </div>
             <div class="col-md-10">
-                <router-outlet></router-outlet>
+                <div (scroll)="scrollHandler($event)" class="main__content custom-scroll">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
     </div>
