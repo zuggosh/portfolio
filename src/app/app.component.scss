@@ -1,5 +1,4 @@
 @import "variable";
-@import "styleAssets";
 
 @keyframes slowLightingBackground {
   0%   {
@@ -16,6 +15,18 @@
   }
   100% {
     box-shadow: 0 0 5px 0 rgba(254,102,0,0);
+  }
+}
+
+@keyframes arrowSlide {
+  0% {
+    padding-top: 0;
+  }
+  50% {
+    padding-top: 15px;
+  }
+  100% {
+    padding-top: 0;
   }
 }
 
@@ -108,7 +119,6 @@
     }
     &.nav__block--active{
       color: $accentColor;
-      //box-shadow: 0 0 5px 0 rgba(255,197,24,1);
       animation-name: slowLightingBackground;
       animation-iteration-count: infinite;
       animation-duration: 10s;
@@ -142,9 +152,10 @@
     background-color: rgba(9,9,9,0.7);
     z-index: 5;
     border-top: 1px solid $black;
-    &:hover{
+    overflow: hidden;
+    &.footer__block--active{
       position: absolute;
-      height: 150px;
+      height: 250px;
       background-color: rgba(9,9,9,1);
       border-top: 1px solid $addColor;
       z-index: 5;
@@ -152,6 +163,65 @@
     }
   }
   &__label{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+  }
+  &__info{
+    font-size: 14px;
+    text-align: center;
+    color: $accentColor;
+  }
+  &__arrowBlock{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $addColor;
+    padding-top: 10px;
+    & .fa{
+      position: absolute;
+      animation: arrowSlide 3s ease-in-out infinite;
+    }
+  }
+  &__form{
+    margin-top: 25px;
+    text-align: center;
+  }
+  &__formTitle{
+    display: inline-block;
+    padding-bottom: 5px;
+    font-style: italic;
+    font-size: 10px;
+    color: $addColor;
+  }
+  &__textArea{
+    width: 100%;
+    height: 50px;
+    border: 1px solid $accentColor;
+    padding: 2px 5px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-style: italic;
+    resize: none;
+    border-radius: 2px;
+  }
+  &__input{
+    width: 100%;
+    height: 25px;
+    padding: 0 5px;
+    border: 1px solid $accentColor;
+    font-style: italic;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+  &__submit{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 }

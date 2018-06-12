@@ -53,20 +53,45 @@
 <div class="footer">
     <div class="container">
         <div class="footer__blockWrap">
-            <div class="footer__block">
+            <div [ngClass]="{'footer__block--active' : showForm}"
+                    class="footer__block">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="footer__label">phone</div>
-                        <a class="footer__info" href="tel:+380962558179">+380 96 255 81 79</a>
+                    <div class="col-md-4">
+                        <div class="footer__label">
+                            phone
+                            <a class="footer__info" href="tel:+380962558179">+380 96 255 81 79</a>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <div class="footer__label">email</div>
-                        <a class="footer__info" href="mailto:limanskiy1989@gmail.com">limanskiy1989@gmail.com</a>
+                    <div class="col-md-4">
+                        <div ng-model="showForm = false"
+                             (click)="showForm ? showForm = false : showForm = true"
+                             class="footer__arrowBlock">
+                            <span [hidden]="showForm" class="footer__message">show form click!</span>
+                            <span [hidden]="!showForm" class="footer__message">hide form click!</span>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <div class="footer__label">right to me</div>
+                    <div class="col-md-4">
+                        <div class="footer__label">
+                            email
+                            <a class="footer__info" href="mailto:limanskiy1989@gmail.com">limanskiy1989@gmail.com</a>
+                        </div>
                     </div>
                 </div>
+                <form class="footer__form" action="">
+                    <span class="footer__formTitle">form request</span>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <textarea class="footer__textArea" placeholder="your message"></textarea>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="footer__input" placeholder="email" type="email">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="footer__submit" type="submit"></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
