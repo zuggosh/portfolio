@@ -1,4 +1,5 @@
 @import "variable";
+@import "styleAssets";
 
 @keyframes slowLightingBackground {
   0%   {
@@ -79,7 +80,7 @@
   &__content{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
   }
 }
 
@@ -135,9 +136,6 @@
     color: white;
   }
   &__block{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 50px;
     width: 100%;
     transition: all 0.5s ease-in-out;
@@ -152,5 +150,8 @@
       z-index: 5;
       box-shadow: 0px -14px 20px -10px rgba(255,255,255,0.1);
     }
+  }
+  &__label{
+
   }
 }
