@@ -53,7 +53,7 @@
 <div class="footer">
     <div class="container">
         <div class="footer__blockWrap">
-            <div [ngClass]="{'footer__block--active' : showForm}"
+            <div [ngClass]="{'footer__block--active' : appComponentModel.show}"
                     class="footer__block">
                 <div class="row">
                     <div class="col-md-4">
@@ -63,11 +63,11 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div ng-model="showForm = false"
-                             (click)="showForm ? showForm = false : showForm = true"
+                        <div ng-model="appComponentModel.show = false"
+                             (click)="appComponentModel.show ? appComponentModel.show = false : appComponentModel.show = true"
                              class="footer__arrowBlock">
-                            <span [hidden]="showForm" class="footer__message">show form click!</span>
-                            <span [hidden]="!showForm" class="footer__message">hide form click!</span>
+                            <span [hidden]="appComponentModel.show" class="footer__message">show form click!</span>
+                            <span [hidden]="!appComponentModel.show" class="footer__message">hide form click!</span>
                             <i class="fa fa-angle-down"></i>
                         </div>
                     </div>
