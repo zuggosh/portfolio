@@ -194,6 +194,7 @@
     cursor: pointer;
     & .fa{
       position: absolute;
+      color: $accentColor;
       animation: arrowSlide 3s ease-in-out infinite;
     }
   }
