@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div ng-model="appComponentModel.show = false"
+                        <div ng-model="appComponentModel.show"
                              (click)="appComponentModel.show ? appComponentModel.show = false : appComponentModel.show = true"
                              class="footer__arrowBlock">
                             <span [hidden]="appComponentModel.show" class="footer__message">show form click!</span>
@@ -78,17 +78,19 @@
                         </div>
                     </div>
                 </div>
-                <form class="footer__form" action="">
+                <form class="footer__form" [formGroup]="form">
                     <span class="footer__formTitle">form request</span>
                     <div class="row">
-                        <div class="col-md-6">
-                            <textarea class="footer__textArea" placeholder="your message"></textarea>
+                        <div class="col-md-6 offset-md-3">
+                            <textarea formControlName="text" class="footer__textArea" placeholder="your message"></textarea>
                         </div>
-                        <div class="col-md-4">
-                            <input class="footer__input" placeholder="email" type="email">
+                        <div class="col-md-6 offset-md-3">
+                            <input formControlName="email" class="footer__input" placeholder="email" type="email">
                         </div>
-                        <div class="col-md-2">
-                            <button class="footer__submit" type="submit"></button>
+                        <div class="col-md-6 offset-md-3 footer__subWrap">
+                            <button *ngIf="form.valid" class="footer__submit" type="submit">
+                                <i class="fa fa-telegram"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
