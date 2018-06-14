@@ -4,6 +4,9 @@
             <div class="header__content">
                 HEADER
             </div>
+            <div ng-model="burger" (click)="burger? burger = false : burger = true" class="burger">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
     </div>
 </div>
@@ -12,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <nav class="nav">
+                <nav [ngClass]="{'nav--active' : burger}" class="nav">
                     <a class="nav__block"
                        routerLink="/"
                        [routerLinkActiveOptions]="{ exact: true }"
@@ -62,7 +65,7 @@
                             <a class="footer__info" href="tel:+380962558179">+380 96 255 81 79</a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 footer__arrowBlockWrap">
                         <div ng-model="appComponentModel.show"
                              (click)="appComponentModel.show ? appComponentModel.show = false : appComponentModel.show = true"
                              class="footer__arrowBlock">
@@ -78,6 +81,7 @@
                         </div>
                     </div>
                 </div>
+
                 <form class="footer__form" [formGroup]="form">
                     <span class="footer__formTitle">form request</span>
                     <div class="row">
@@ -94,6 +98,7 @@
                         </div>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
