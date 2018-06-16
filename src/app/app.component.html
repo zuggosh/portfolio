@@ -4,7 +4,7 @@
             <div class="header__content">
                 HEADER
             </div>
-            <div ng-model="burger" (click)="burger? burger = false : burger = true" class="burger">
+            <div ng-model="appComponentModel.burger" (click)="appComponentModel.burger? appComponentModel.burger = false : appComponentModel.burger = true" class="burger">
                 <i class="fa fa-bars"></i>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <nav [ngClass]="{'nav--active' : burger}" class="nav">
+                <nav [ngClass]="{'nav--active' : appComponentModel.burger}" class="nav">
                     <a class="nav__block"
                        routerLink="/"
                        [routerLinkActiveOptions]="{ exact: true }"
@@ -71,7 +71,7 @@
                              class="footer__arrowBlock">
                             <span [hidden]="appComponentModel.show" class="footer__message">click to show form</span>
                             <span [hidden]="!appComponentModel.show" class="footer__message">click to hide form</span>
-                            <i class="fa fa-angle-down"></i>
+                            <i class="fa fa-angle-up"></i>
                         </div>
                     </div>
                     <div class="col-md-4">

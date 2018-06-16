@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 class AppComponentModel {
     show: boolean;
+    burger: boolean;
 }
 
 @Component({

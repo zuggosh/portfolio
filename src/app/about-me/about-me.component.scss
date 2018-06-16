@@ -4,7 +4,7 @@
   position: relative;
   margin-bottom: 25px;
   color: $greyLight;
-  margin-right: 65px;
+  margin-right: 35px;
   font-size: 14px;
   &__navList{
     position: absolute;
@@ -15,6 +15,8 @@
     list-style: none;
   }
   &__navItem{
+    display: flex;
+    flex-direction: row-reverse;
     position: relative;
     width: 8px;
     height: 8px;
@@ -22,7 +24,7 @@
     &:hover{
       .aboutMe__navTitle{
         opacity: 1;
-        left: 13px;
+        //left: 13px;
       }
     }
   }
@@ -44,11 +46,13 @@
   &__navTitle{
     position: absolute;
     top: -4px;
-    left: 0;
+    right: 12px;
     font-size: 10px;
     font-style: italic;
+    border-radius: 3px;
     opacity: 0;
     color: $addColor;
+    background-color: black;
     transition: all 0.2s ease;
     cursor: default;
     pointer-events: none;
