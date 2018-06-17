@@ -14,12 +14,12 @@ export interface NewsAssets {
 })
 
 export class NewsService {
-    publicKey = '554d9aa5103d42e6a2360610deca0601';
-    newsUrl;
     constructor(private http: HttpClient) { }
     getPressProof(countryCode: string, category: string, querySearch: string) {
-        this.newsUrl = `https://newsapi.org/v2/top-headlines?country=${countryCode}&category=${category}${querySearch}&pageSize=100&apiKey=${this.publicKey}`;
-        return this.http.get(this.newsUrl);
+        const publicKey = '554d9aa5103d42e6a2360610deca0601';
+        const templateUrl = 'https://newsapi.org/v2/top-headlines';
+        const newsUrl = `${templateUrl}?country=${countryCode}&category=${category}${querySearch}&apiKey=${publicKey}`;
+        return this.http.get(newsUrl);
     }
     getNewsAssets() {
         return this.http.get('assets/newsAssets.json');
