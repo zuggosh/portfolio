@@ -10,6 +10,7 @@ import { MusicComponent } from './music/music.component';
 import { NewsComponent } from './news/news.component';
 
 import { NewsService } from './service/news/news.service';
+import { AboutMeService } from './service/about-me/about-me.service';
 
 const appRoutes: Routes = [
     { path: '', component: AboutMeComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-      NewsService
+      NewsService,
+      AboutMeService
   ],
   bootstrap: [AppComponent]
 })
