@@ -13,6 +13,6 @@ export class AboutMeService {
 
   constructor(private http: HttpClient) { }
   getAboutMe () {
-      return this.http.get('http://localhost:3000/api/post');
+      return this.http.get('https://salty-tundra-80705.herokuapp.com/api/post');
   }
 }
