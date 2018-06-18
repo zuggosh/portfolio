@@ -1,7 +1,6 @@
 <div class="news">
   <div class="news__bar"
        *ngIf="newsAssets">
-
       <div class="news__categoryWrap">
         <ul class="news__categoryList">
           <li *ngFor="let category of newsAssets.categories"
@@ -28,7 +27,10 @@
           </div>
           <div class="col-6">
             <div class="news__inputWrap">
-              <input class="news__input" (keyup)="querySearchRequest.next($event.target.value)" type="text">
+              <input class="news__input"
+                     placeholder="search in feed"
+                     (keyup)="querySearchRequest.next($event.target.value)"
+                     type="text">
             </div>
           </div>
         </div>
@@ -54,13 +56,10 @@
           read more...
         </a>
       </div>
-
       <div  [hidden]="pressProof.author < 1"
             class="pressProof__author">
         Author: {{pressProof.author}}
       </div>
-
-
     </div>
   </div>
 </div>

@@ -116,9 +116,80 @@
   &__footerWrap{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     clear: both;
   }
   &__link{
+    flex-shrink: 0;
     color: $accentColor;
   }
+}
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .news{
+    &__categoryList{
+      font-size: 14px;
+    }
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 575px) {
+  .news{
+    &__categoryList{
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    &__categoryItem{
+      margin: 0 10px;
+    }
+    &__select{
+      font-size: 12px;
+    }
+    &__input{
+      height: 27px;
+      font-size: 12px;
+    }
+  }
+}
+
+/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .pressProof{
+    &__title{
+      font-size: 16px;
+    }
+    &__imgWrapper{
+      float: none;
+      width: 100%;
+    }
+    &__description{
+      font-size: 12px;
+    }
+    &__magazine{
+      font-size: 12px;
+    }
+  }
+  .news{
+    padding-right: 15px;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
 }
