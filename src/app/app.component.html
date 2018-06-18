@@ -4,8 +4,14 @@
             <div class="header__content">
                 HEADER
             </div>
-            <div ng-model="appComponentModel.burger" (click)="appComponentModel.burger? appComponentModel.burger = false : appComponentModel.burger = true" class="burger">
-                <i class="fa fa-bars"></i>
+            <div (click)="appComponentModel.burger ? appComponentModel.burger = false : appComponentModel.burger = true"
+                 [ngClass]="{'burger--active' : appComponentModel.burger}"
+                 class="burger">
+                <!--<i class="fa fa-bars"></i>-->
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
             </div>
         </div>
     </div>
@@ -17,6 +23,7 @@
             <div class="col-md-2">
                 <nav [ngClass]="{'nav--active' : appComponentModel.burger}" class="nav">
                     <a class="nav__block"
+                       (click)="appComponentModel.burger = false"
                        routerLink="/"
                        [routerLinkActiveOptions]="{ exact: true }"
                        routerLinkActive="nav__block--active">
@@ -25,17 +32,20 @@
                     </a>
                     <a class="nav__block"
                        routerLink="/news"
+                       (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">N</span>
                         <span class="nav__title">NEWS</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/music"
+                       (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">M</span>
                         <span class="nav__title">MUSIC</span>
                     </a>
                     <a class="nav__block"
+                       (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">W</span>
                         <span class="nav__title">WEATHER</span>
