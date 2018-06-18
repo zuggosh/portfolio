@@ -315,9 +315,7 @@
     z-index: 100;
     overflow: hidden;
     &.burger--active{
-      transition: all 0.2s ease;
       .burger__line:first-child{
-        transition: all 0.2s ease;
         position: relative;
         right: 50px;
       }
@@ -329,7 +327,6 @@
         transform: rotate(45deg);
       }
       .burger__line:last-child{
-        transition: all 0.2s ease;
         position: relative;
         left: 50px;
       }
