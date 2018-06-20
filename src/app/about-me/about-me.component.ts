@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutMeService, AboutMe } from '../service/about-me/about-me.service';
+import { FetchDataService } from '../service/fetch-data/fetch-data.service';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { AboutMeService, AboutMe } from '../service/about-me/about-me.service';
 
 export class AboutMeComponent implements OnInit {
   aboutMe: AboutMe;
-  constructor(private aboutMeService: AboutMeService) { }
+  constructor(private aboutMeService: AboutMeService,
+              private fetchDataService: FetchDataService) { }
 
   ngOnInit() {
     this.getAboutMeInfo();
@@ -24,7 +26,7 @@ export class AboutMeComponent implements OnInit {
     this.aboutMeService.getAboutMe()
         .subscribe((data: AboutMe) => {
             this.aboutMe = data;
-            console.log(this.aboutMe);
+            this.fetchDataService.changeMessage(false);
         });
   }
 }

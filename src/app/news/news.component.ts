@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { News, NewsAssets, NewsService } from '../service/news/news.service';
 import { Observable, Subject, pipe } from 'rxjs';
+
+import { News, NewsAssets, NewsService } from '../service/news/news.service';
+import { FetchDataService } from '../service/fetch-data/fetch-data.service';
 
 import {debounceTime} from 'rxjs/operators';
 
@@ -18,7 +20,8 @@ export class NewsComponent implements OnInit {
   category = 'general';
   querySearch = '';
   querySearchRequest = new Subject();
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService,
+              private fetchDataService: FetchDataService) { }
 
   ngOnInit() {
     this.showNewsAssets();
@@ -56,6 +59,7 @@ export class NewsComponent implements OnInit {
     this.newsService.getPressProof(countryCode, category, querySearch)
       .subscribe((data: News) => {
         this.news = data;
+        this.fetchDataService.changeMessage(false);
       });
   }
 

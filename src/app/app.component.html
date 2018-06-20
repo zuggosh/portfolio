@@ -7,7 +7,6 @@
             <div (click)="appComponentModel.burger ? appComponentModel.burger = false : appComponentModel.burger = true"
                  [ngClass]="{'burger--active' : appComponentModel.burger}"
                  class="burger">
-                <!--<i class="fa fa-bars"></i>-->
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
@@ -54,7 +53,15 @@
 
             </div>
             <div class="col-md-10">
-                <div (scroll)="scrollHandler($event)" class="main__content custom-scroll">
+                <div class="main__spinnerWrap"
+                     [ngClass]="{'main__spinnerWrap--active' : appComponentModel.spinnerShow}">
+                    <div class="main__spinner">
+                        <div class="main__cube"></div>
+                        <div class="main__cube main__cube--second"></div>
+                    </div>
+                </div>
+                <div (scroll)="scrollHandler($event)"
+                     class="main__content custom-scroll">
                     <router-outlet></router-outlet>
                 </div>
             </div>

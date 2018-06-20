@@ -11,6 +11,7 @@ import { NewsComponent } from './news/news.component';
 
 import { NewsService } from './service/news/news.service';
 import { AboutMeService } from './service/about-me/about-me.service';
+import { FetchDataService } from './service/fetch-data/fetch-data.service';
 
 const appRoutes: Routes = [
     { path: '', component: AboutMeComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
   ],
   providers: [
       NewsService,
-      AboutMeService
+      AboutMeService,
+      FetchDataService
   ],
   bootstrap: [AppComponent]
 })
