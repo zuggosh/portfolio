@@ -86,8 +86,11 @@
     padding: 0 25px 2px 5px;
     border-bottom: 1px solid $addColor;
   }
+  &__descBlock{
+    margin-bottom: 25px;
+  }
   &__desc{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     text-align: justify;
   }
   &__time{
