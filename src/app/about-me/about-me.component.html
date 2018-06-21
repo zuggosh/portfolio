@@ -1,4 +1,4 @@
-<div id="aboutMe" class="aboutMe">
+<div *ngIf="aboutMe" id="aboutMe" class="aboutMe">
 
   <ul id="aboutMeNav" class="aboutMe__navList">
     <li class="aboutMe__navItem">
@@ -25,8 +25,29 @@
     </li>
   </ul>
 
+  <div *ngFor="let paragraph of aboutMe.post.paragraphs">
+    <h1 class="aboutMe__title">{{paragraph.title}}</h1>
+    <div class="aboutMe__descBlock">
+
+      <div *ngIf="paragraph.description"
+           class="aboutMe__desc">
+        {{paragraph.description}}
+      </div>
+
+      <ul *ngIf="paragraph.list"
+          class="aboutMe__descList">
+        <li *ngFor="let listItem of paragraph.list"
+            class="aboutMe__descItem">
+          {{listItem}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!--
   <div class="aboutMe__photoWrap">
-    <img class="aboutMe__photo" src="assets/img/myPhoto.jpg" alt="my photo">
+    <img class="aboutMe__photo" src="{{aboutMe.post.image}}" alt="my photo">
   </div>
   <h1 id="biography" class="aboutMe__title">Hello world</h1>
   <div class="aboutMe__descBlock">
@@ -115,4 +136,7 @@
     </div>
 
   </div>
+  -->
+
+
 </div>
