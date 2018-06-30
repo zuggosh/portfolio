@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 import { FetchDataService } from './service/fetch-data/fetch-data.service';
 
@@ -19,11 +20,13 @@ export class AppComponent {
     appComponentModel = new AppComponentModel();
     form: FormGroup;
     constructor(@Inject(FormBuilder) fb: FormBuilder,
-                private fetchDataService: FetchDataService) {
+                private fetchDataService: FetchDataService,
+                private translate: TranslateService) {
         this.form = fb.group({
             text: ['', Validators.minLength(0)],
             email: [' ', Validators.minLength(2)]
         });
+        translate.setDefaultLang('en');
     }
 
     ngOnInit() {
@@ -40,5 +43,8 @@ export class AppComponent {
                 el.style.top = Math.abs(aboutMe) + topBuffet + 'px';
             }
         }
+    }
+    switchLanguage(language: string) {
+      this.translate.use(language);
     }
 }

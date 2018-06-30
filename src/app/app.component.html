@@ -22,6 +22,15 @@
 
 <main class="main">
     <div class="container">
+
+      <h1 translate>Title</h1>
+
+      <div>
+        {{ 'Intro' | translate:user }}
+      </div>
+      <button (click)="switchLanguage('en')">en</button>
+
+      <button (click)="switchLanguage('fr')">fr</button>
         <div class="row">
             <div class="col-md-2">
                 <nav [ngClass]="{'nav--active' : appComponentModel.burger}" class="nav">
