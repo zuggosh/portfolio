@@ -40,27 +40,27 @@
                        [routerLinkActiveOptions]="{ exact: true }"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">A</span>
-                        <span class="nav__title">{{ 'GENERAL.about_me' | translate:user }}</span>
+                        <span class="nav__title">{{ 'GENERAL.about_me' | translate }}</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/news"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">N</span>
-                        <span class="nav__title">{{ 'GENERAL.news' | translate:user }}</span>
+                        <span class="nav__title">{{ 'GENERAL.news' | translate }}</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/music"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">M</span>
-                        <span class="nav__title">{{ 'GENERAL.music' | translate:user }}</span>
+                        <span class="nav__title">{{ 'GENERAL.music' | translate }}</span>
                     </a>
                     <a class="nav__block"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">P</span>
-                        <span class="nav__title">{{ 'GENERAL.portfolio' | translate:user }}</span>
+                        <span class="nav__title">{{ 'GENERAL.portfolio' | translate }}</span>
                     </a>
                 </nav>
 
@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer__label">
-                            {{ 'FORM.phone' | translate:user }}
+                            {{ 'FORM.phone' | translate }}
                             <a class="footer__info" href="tel:+380962258179">+380 96 225 81 79</a>
                         </div>
                     </div>
@@ -99,31 +99,31 @@
                         <div ng-model="appComponentModel.show"
                              (click)="appComponentModel.show ? appComponentModel.show = false : appComponentModel.show = true"
                              class="footer__arrowBlock">
-                            <span [hidden]="appComponentModel.show" class="footer__message">{{ 'FORM.show_form' | translate:user }}</span>
-                            <span [hidden]="!appComponentModel.show" class="footer__message">{{ 'FORM.hide_form' | translate:user }}</span>
+                            <span [hidden]="appComponentModel.show" class="footer__message">{{ 'FORM.show_form' | translate }}</span>
+                            <span [hidden]="!appComponentModel.show" class="footer__message">{{ 'FORM.hide_form' | translate }}</span>
                             <i class="fa fa-angle-up"></i>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="footer__label">
-                            {{ 'FORM.email' | translate:user }}
+                            {{ 'FORM.email' | translate }}
                             <a class="footer__info" href="mailto:limanskiy1989@gmail.com">limanskiy1989@gmail.com</a>
                         </div>
                     </div>
                 </div>
 
                 <form class="footer__form" [formGroup]="form">
-                    <span class="footer__formTitle">{{ 'FORM.show_form' | translate:user }}</span>
+                    <span class="footer__formTitle">{{ 'FORM.show_form' | translate }}</span>
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
                             <textarea formControlName="text"
                                       class="footer__textArea"
-                                      placeholder="{{ 'FORM.your_message' | translate:user }}"></textarea>
+                                      placeholder="{{ 'FORM.your_message' | translate }}"></textarea>
                         </div>
                         <div class="col-md-6 offset-md-3">
                             <input formControlName="email"
                                    class="footer__input"
-                                   placeholder="{{ 'FORM.your_email' | translate:user }}"
+                                   placeholder="{{ 'FORM.your_email' | translate }}"
                                    type="email">
                         </div>
                         <div class="col-md-6 offset-md-3 footer__subWrap">

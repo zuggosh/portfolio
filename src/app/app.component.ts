@@ -21,7 +21,7 @@ export class AppComponent {
     form: FormGroup;
     constructor(@Inject(FormBuilder) fb: FormBuilder,
                 private fetchDataService: FetchDataService,
-                private translate: TranslateService) {
+                public translate: TranslateService) {
         this.form = fb.group({
             text: ['', Validators.minLength(10)],
             email: [' ', Validators.minLength(2)]
