@@ -1,0 +1,17 @@
+{
+  "GENERAL": {
+    "about_me": "about me",
+    "news": "news",
+    "music": "music",
+    "portfolio": "portfolio"
+  },
+  "FORM": {
+    "phone": "phone",
+    "show_form": "click to show form",
+    "hide_form": "click to hide form",
+    "email": "email",
+    "form_request": "form request",
+    "your_message": "your message",
+    "your_email": "your email"
+  }
+}
