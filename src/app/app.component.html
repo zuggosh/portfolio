@@ -14,10 +14,12 @@
             </div>
             <div class="header__languages">
               <span class="header__language"
+                    [ngClass]="{'header__language--active' : translate.currentLang === 'ru'}"
                     (click)="switchLanguage('ru')">
                 RU
               </span>
-              <span class="header__language header__language--active"
+              <span class="header__language "
+                    [ngClass]="{'header__language--active' : translate.currentLang === undefined || translate.currentLang === 'en'}"
                     (click)="switchLanguage('en')">
                 EN
               </span>
@@ -28,12 +30,6 @@
 
 <main class="main">
     <div class="container">
-
-      <!-- todo translate example
-      <h1 translate>Title</h1>
-      <div>
-        {{ 'Intro' | translate:user }}
-      </div>-->
 
         <div class="row">
             <div class="col-md-2">

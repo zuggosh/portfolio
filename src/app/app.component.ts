@@ -23,12 +23,11 @@ export class AppComponent {
                 private fetchDataService: FetchDataService,
                 private translate: TranslateService) {
         this.form = fb.group({
-            text: ['', Validators.minLength(0)],
+            text: ['', Validators.minLength(10)],
             email: [' ', Validators.minLength(2)]
         });
         translate.setDefaultLang('en');
     }
-
     ngOnInit() {
         this.fetchDataService.currentMessage.subscribe(message => this.appComponentModel.spinnerShow = message)
     }
@@ -47,4 +46,5 @@ export class AppComponent {
     switchLanguage(language: string) {
       this.translate.use(language);
     }
+
 }
