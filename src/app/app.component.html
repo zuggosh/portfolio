@@ -13,8 +13,14 @@
                 <span class="burger__line"></span>
             </div>
             <div class="header__languages">
-              <span class="header__language">RU</span>
-              <span class="header__language header__language--active">EN</span>
+              <span class="header__language"
+                    (click)="switchLanguage('ru')">
+                RU
+              </span>
+              <span class="header__language header__language--active"
+                    (click)="switchLanguage('en')">
+                EN
+              </span>
             </div>
         </div>
     </div>
@@ -23,14 +29,12 @@
 <main class="main">
     <div class="container">
 
+      <!-- todo translate example
       <h1 translate>Title</h1>
-
       <div>
         {{ 'Intro' | translate:user }}
-      </div>
-      <button (click)="switchLanguage('en')">en</button>
+      </div>-->
 
-      <button (click)="switchLanguage('fr')">fr</button>
         <div class="row">
             <div class="col-md-2">
                 <nav [ngClass]="{'nav--active' : appComponentModel.burger}" class="nav">
@@ -40,27 +44,27 @@
                        [routerLinkActiveOptions]="{ exact: true }"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">A</span>
-                        <span class="nav__title">ABOUT ME</span>
+                        <span class="nav__title">{{ 'GENERAL.about_me' | translate:user }}</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/news"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">N</span>
-                        <span class="nav__title">NEWS</span>
+                        <span class="nav__title">{{ 'GENERAL.news' | translate:user }}</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/music"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
                         <span class="nav__capital">M</span>
-                        <span class="nav__title">MUSIC</span>
+                        <span class="nav__title">{{ 'GENERAL.music' | translate:user }}</span>
                     </a>
                     <a class="nav__block"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
-                        <span class="nav__capital">W</span>
-                        <span class="nav__title">WEATHER</span>
+                        <span class="nav__capital">P</span>
+                        <span class="nav__title">{{ 'GENERAL.portfolio' | translate:user }}</span>
                     </a>
                 </nav>
 
@@ -91,7 +95,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer__label">
-                            phone
+                            {{ 'FORM.phone' | translate:user }}
                             <a class="footer__info" href="tel:+380962258179">+380 96 225 81 79</a>
                         </div>
                     </div>
@@ -99,27 +103,32 @@
                         <div ng-model="appComponentModel.show"
                              (click)="appComponentModel.show ? appComponentModel.show = false : appComponentModel.show = true"
                              class="footer__arrowBlock">
-                            <span [hidden]="appComponentModel.show" class="footer__message">click to show form</span>
-                            <span [hidden]="!appComponentModel.show" class="footer__message">click to hide form</span>
+                            <span [hidden]="appComponentModel.show" class="footer__message">{{ 'FORM.show_form' | translate:user }}</span>
+                            <span [hidden]="!appComponentModel.show" class="footer__message">{{ 'FORM.hide_form' | translate:user }}</span>
                             <i class="fa fa-angle-up"></i>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="footer__label">
-                            email
+                            {{ 'FORM.email' | translate:user }}
                             <a class="footer__info" href="mailto:limanskiy1989@gmail.com">limanskiy1989@gmail.com</a>
                         </div>
                     </div>
                 </div>
 
                 <form class="footer__form" [formGroup]="form">
-                    <span class="footer__formTitle">form request</span>
+                    <span class="footer__formTitle">{{ 'FORM.show_form' | translate:user }}</span>
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                            <textarea formControlName="text" class="footer__textArea" placeholder="your message"></textarea>
+                            <textarea formControlName="text"
+                                      class="footer__textArea"
+                                      placeholder="{{ 'FORM.your_message' | translate:user }}"></textarea>
                         </div>
                         <div class="col-md-6 offset-md-3">
-                            <input formControlName="email" class="footer__input" placeholder="email" type="email">
+                            <input formControlName="email"
+                                   class="footer__input"
+                                   placeholder="{{ 'FORM.your_email' | translate:user }}"
+                                   type="email">
                         </div>
                         <div class="col-md-6 offset-md-3 footer__subWrap">
                             <button *ngIf="form.valid" class="footer__submit" type="submit">

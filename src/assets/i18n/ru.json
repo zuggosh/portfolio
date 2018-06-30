@@ -1,0 +1,17 @@
+{
+  "GENERAL": {
+    "about_me": "обо мне",
+    "news": "новости",
+    "music": "музыка",
+    "portfolio": "портфолио"
+  },
+  "FORM": {
+    "phone": "телефон",
+    "show_form": "показать форму",
+    "hide_form": "скрыть форму",
+    "email": "почта",
+    "form_request": "форма запроса",
+    "your_message": "ваше сообщение",
+    "your_email": "ваша почта"
+  }
+}
