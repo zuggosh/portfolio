@@ -39,28 +39,28 @@
                        routerLink="/"
                        [routerLinkActiveOptions]="{ exact: true }"
                        routerLinkActive="nav__block--active">
-                        <span class="nav__capital">A</span>
+                        <span class="nav__capital">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
                         <span class="nav__title">{{ 'GENERAL.about_me' | translate }}</span>
+                    </a>
+                    <a class="nav__block"
+                       (click)="appComponentModel.burger = false"
+                       routerLink="/portfolio"
+                       routerLinkActive="nav__block--active">
+                          <span class="nav__capital">
+                            <i class="fa fa-cube" aria-hidden="true"></i>
+                          </span>
+                      <span class="nav__title">{{ 'GENERAL.portfolio' | translate }}</span>
                     </a>
                     <a class="nav__block"
                        routerLink="/news"
                        (click)="appComponentModel.burger = false"
                        routerLinkActive="nav__block--active">
-                        <span class="nav__capital">N</span>
+                        <span class="nav__capital">
+                          <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                        </span>
                         <span class="nav__title">{{ 'GENERAL.news' | translate }}</span>
-                    </a>
-                    <a class="nav__block"
-                       routerLink="/music"
-                       (click)="appComponentModel.burger = false"
-                       routerLinkActive="nav__block--active">
-                        <span class="nav__capital">M</span>
-                        <span class="nav__title">{{ 'GENERAL.music' | translate }}</span>
-                    </a>
-                    <a class="nav__block"
-                       (click)="appComponentModel.burger = false"
-                       routerLinkActive="nav__block--active">
-                        <span class="nav__capital">P</span>
-                        <span class="nav__title">{{ 'GENERAL.portfolio' | translate }}</span>
                     </a>
                 </nav>
 

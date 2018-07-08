@@ -24,12 +24,12 @@ export class AppComponent {
                 public translate: TranslateService) {
         this.form = fb.group({
             text: ['', Validators.minLength(10)],
-            email: [' ', Validators.minLength(2)]
+            email: [' ', Validators.minLength(4)]
         });
         translate.setDefaultLang('en');
     }
     ngOnInit() {
-        this.fetchDataService.currentMessage.subscribe(message => this.appComponentModel.spinnerShow = message)
+        this.fetchDataService.currentMessage.subscribe(message => this.appComponentModel.spinnerShow = message);
     }
 
     scrollHandler($event) {

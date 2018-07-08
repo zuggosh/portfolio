@@ -26,7 +26,6 @@ export class AboutMeComponent implements OnInit {
     this.aboutMeService.getAboutMe()
         .subscribe((data: AboutMe) => {
             this.aboutMe = data;
-            console.log(data)
             this.fetchDataService.changeMessage(false);
         });
   }

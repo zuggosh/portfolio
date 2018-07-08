@@ -135,7 +135,7 @@
     position: relative;
   }
   &__cube {
-    background-color: #333;
+    background-color: $addColor;
     width: 15px;
     height: 15px;
     position: absolute;
@@ -184,6 +184,8 @@
     transition: transform 0.4s ease;
   }
   &__title{
+    text-transform: uppercase;
+    font-weight: 700;
     margin-bottom: 10px;
   }
 }
