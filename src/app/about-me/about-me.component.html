@@ -8,10 +8,15 @@
     </li>
   </ul>
 
+  <div>
+    <button>download</button>
+  </div>
+
   <div *ngFor="let paragraph of aboutMe.post.paragraphs">
     <div *ngIf="paragraph.image" class="aboutMe__photoWrap">
       <img class="aboutMe__photo" src="{{paragraph.image}}" alt="my photo">
     </div>
+
 
     <h1 id={{paragraph.name}} class="aboutMe__title">{{paragraph.title}}</h1>
     <div class="aboutMe__descBlock">

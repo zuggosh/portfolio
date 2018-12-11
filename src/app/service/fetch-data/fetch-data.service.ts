@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class FetchDataService {
-  private fetchData = new BehaviorSubject(true);
+  public fetchData = new BehaviorSubject(true);
   currentMessage = this.fetchData.asObservable();
   constructor() { }
 
