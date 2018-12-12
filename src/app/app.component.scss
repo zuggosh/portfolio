@@ -167,7 +167,7 @@
       color: $white;
       text-decoration: none;
       .nav__capital{
-        transform: rotate3d(0, 1, 0, 180deg);
+        text-shadow: 0 0 22px rgba(254, 103, 0, 0.8);
       }
     }
     &.nav__block--active{
