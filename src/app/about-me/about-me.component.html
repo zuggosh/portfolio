@@ -9,13 +9,10 @@
   </ul>
 
 
-  <!--<div *ngIf="paragraph.image" class="aboutMe__photoWrap">-->
-    <!--<img class="aboutMe__photo" src="{{paragraph.image}}" alt="my photo">-->
-  <!--</div>-->
-  <div>
+
+  <div class="resumeBar">
     download my resume
-    <a href="https://salty-tundra-80705.herokuapp.com/api/pdf">resume</a>
-    <!--<button (clic)>download</button>-->
+    <a class="resumeBar__btn" href="https://salty-tundra-80705.herokuapp.com/api/pdf">resume</a>
   </div>
 
   <div *ngFor="let paragraph of aboutMe.post.paragraphs">

@@ -98,8 +98,28 @@
     font-size: 16px;
     color: $white;
   }
+
 }
 
+.resumeBar{
+  font-size: 18px;
+  padding: 10px 0;
+  &__btn{
+    border: 2px solid $accentColor;
+    padding: 2px 15px;
+    padding-top: 0;
+    color: $accentColor;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      background-color: $accentColor;
+      color: $black;
+    }
+  }
+}
 
 /*==========  Desktop First  ==========*/
 
