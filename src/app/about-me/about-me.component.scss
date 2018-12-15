@@ -5,7 +5,7 @@
   margin-bottom: 25px;
   color: $greyLight;
   margin-right: 35px;
-  font-size: 14px;
+  font-size: 16px;
   &__navList{
     position: absolute;
     top: 200px;
@@ -24,7 +24,6 @@
     &:hover{
       .aboutMe__navTitle{
         opacity: 1;
-        //left: 13px;
       }
     }
   }
@@ -98,28 +97,30 @@
     font-size: 16px;
     color: $white;
   }
-
-}
-
-.resumeBar{
-  font-size: 18px;
-  padding: 10px 0;
-  &__btn{
-    border: 2px solid $accentColor;
-    padding: 2px 15px;
-    padding-top: 0;
-    color: $accentColor;
+  &__resumeBar{
+    font-size: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid $addColor;
+    text-align: right;
+  }
+  &__resumeBtn{
+    display: inline-block;
+    padding: 5px 25px;
+    color: $black;
+    background-color: $accentColor;
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: bold;
     margin: 0 3px;
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
     &:hover{
-      background-color: $accentColor;
-      color: $black;
+      background-color: $addColor;
     }
   }
 }
+
+
 
 /*==========  Desktop First  ==========*/
 
