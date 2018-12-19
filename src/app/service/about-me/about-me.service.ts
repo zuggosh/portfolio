@@ -12,13 +12,13 @@ export interface AboutMe {
   providedIn: 'root'
 })
 export class AboutMeService {
-
   constructor(private http: HttpClient) { }
   // getAboutMe() {
   //     return this.http.get('https://salty-tundra-80705.herokuapp.com/api/post');
   // }
+  serverUrl = 'https://salty-tundra-80705.herokuapp.com';
   getAboutMe(): Observable<AboutMe> {
-    return this.http.get('https://salty-tundra-80705.herokuapp.com/api/post').pipe(map(
+    return this.http.get(`${this.serverUrl}/api/post`).pipe(map(
       data => {
         return data;
       }),
@@ -26,5 +26,12 @@ export class AboutMeService {
         console.log(err);
         return throwError(err);
       }));
+  }
+
+  mailMe(mail: string, text: string) {
+    return this.http.post(`${this.serverUrl}/api/map`, {
+      mail: mail,
+      text: text
+    });
   }
 }
