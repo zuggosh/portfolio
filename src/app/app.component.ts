@@ -29,7 +29,7 @@ export class AppComponent {
                 public translate: TranslateService) {
         this.form = fb.group({
             text: ['', [Validators.minLength(2), Validators.required]],
-            email: [' ', [Validators.minLength(2), Validators.required]]
+            email: ['', [Validators.minLength(2), Validators.required]]
         });
         translate.setDefaultLang('en');
     }
@@ -41,7 +41,7 @@ export class AppComponent {
       this.aboutMeService.mailMe( this.form.value.email, this.form.value.text)
         .subscribe((data: any) => {
           this.appComponentModel.emailSend = true;
-          setTimeout( () => {
+          setTimeout(() => {
             this.appComponentModel.emailSend = false;
             this.form.reset();
           }, 400);
