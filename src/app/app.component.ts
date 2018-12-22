@@ -9,6 +9,7 @@ import {News} from './service/news/news.service';
 class AppComponentModel {
     show: boolean;
     burger: boolean;
+    emailSend: boolean;
     spinnerShow: boolean;
 }
 
@@ -27,8 +28,8 @@ export class AppComponent {
                 private fetchDataService: FetchDataService,
                 public translate: TranslateService) {
         this.form = fb.group({
-            text: ['', Validators.minLength(0)],
-            email: [' ', Validators.minLength(0)]
+            text: ['', [Validators.minLength(2), Validators.required]],
+            email: [' ', [Validators.minLength(2), Validators.required]]
         });
         translate.setDefaultLang('en');
     }
@@ -37,9 +38,13 @@ export class AppComponent {
     }
 
     onSubmit () {
-      this.aboutMeService.mailMe( this.form.value.mail, this.form.value.text)
+      this.aboutMeService.mailMe( this.form.value.email, this.form.value.text)
         .subscribe((data: any) => {
-          console.log(data);
+          this.appComponentModel.emailSend = true;
+          setTimeout( () => {
+            this.appComponentModel.emailSend = false;
+            this.form.reset();
+          }, 400);
         });
     }
 

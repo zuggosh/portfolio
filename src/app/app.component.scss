@@ -297,11 +297,20 @@
     border: none;
     background-color: $accentColor;
     cursor: pointer;
+    overflow: hidden;
     box-shadow: 0px 0px 30px 0px rgba(254,102,0,1);
     & .fa{
+      position: absolute;
+      top: 29%;
+      left: 31%;
       color: $greyDark;
       padding-bottom: 2px;
       padding-right: 1px;
+      transition: all 0.4s ease;
+      &.fa--away{
+        top: -100%;
+        left: 100%;
+      }
     }
     &:focus{
       outline: none;

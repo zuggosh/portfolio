@@ -126,8 +126,11 @@
                                    type="email">
                         </div>
                         <div class="col-md-6 offset-md-3 footer__subWrap">
-                            <button *ngIf="form.valid" class="footer__submit" type="submit">
-                                <i class="fa fa-telegram"></i>
+                            <button *ngIf="form.valid"
+                                    class="footer__submit"
+                                    type="submit">
+                                <i [ngClass]="{'fa--away' : appComponentModel.emailSend}"
+                                   class="fa fa-telegram"></i>
                             </button>
                         </div>
                     </div>

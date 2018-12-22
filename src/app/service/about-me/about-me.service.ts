@@ -26,9 +26,9 @@ export class AboutMeService {
       }));
   }
 
-  mailMe(mail: string, text: string) {
+  mailMe(email: string, text: string) {
     return this.http.post(`${this.serverUrl}/api/mail`, {
-      mail: mail,
+      mail: email,
       text: text
     });
   }
