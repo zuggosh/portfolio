@@ -17,8 +17,8 @@ export interface MailMe {
 export class AboutMeService {
   constructor(private http: HttpClient) { }
 
-  // serverUrl = 'https://salty-tundra-80705.herokuapp.com';
-  serverUrl = 'http://localhost:3000';
+  serverUrl = 'https://salty-tundra-80705.herokuapp.com';
+  // serverUrl = 'http://localhost:3000';
     getAboutMe(): Observable<AboutMe> {
     return this.http.get(`${this.serverUrl}/api/post`).pipe(map(
       data => {
