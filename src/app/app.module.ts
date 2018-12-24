@@ -15,6 +15,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NewsService } from './service/news/news.service';
 import { AboutMeService } from './service/about-me/about-me.service';
 import { FetchDataService } from './service/fetch-data/fetch-data.service';
+import { PortfolioService } from './service/portfolio/portfolio.service';
 
 const appRoutes: Routes = [
     { path: '', component: AboutMeComponent },
@@ -50,7 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
       NewsService,
       AboutMeService,
-      FetchDataService
+      FetchDataService,
+      PortfolioService
   ],
   bootstrap: [AppComponent]
 })
