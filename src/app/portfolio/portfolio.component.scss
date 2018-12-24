@@ -1,0 +1,48 @@
+@import "../variable";
+
+.portfolio{
+  &__block{
+    background-color: $greyDark;
+    padding: 5px 15px 15px 15px;
+    margin: 0 15px 25px 0;
+  }
+  &__title{
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    padding: 0 25px 2px 5px;
+    color: $white;
+    border-bottom: 1px solid $addColor;
+  }
+  &__imgWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  &__img{
+    width: 32%;
+  }
+  &__linkBlock{
+    margin: 5px 0;
+  }
+  &__link{
+    display: inline-block;
+    padding: 10px 20px;
+    color: $black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: $accentColor;
+    transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: $addColor;
+      }
+  }
+  &__desc{
+    font-size: 16px;
+    text-align: justify;
+    color: $greyLight;
+  }
+}

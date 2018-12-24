@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FetchDataService } from '../service/fetch-data/fetch-data.service';
+
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.sass']
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fetchDataService: FetchDataService) { }
 
   ngOnInit() {
+      this.fetchDataService.changeMessage(false);
   }
 
 }

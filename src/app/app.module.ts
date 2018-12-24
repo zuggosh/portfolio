@@ -23,7 +23,6 @@ const appRoutes: Routes = [
     { path: 'portfolio', component: PortfolioComponent},
 ];
 
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
