@@ -1,0 +1,12 @@
+[
+  {
+    "title_site": "Geoproff",
+    "images": [
+      "./src/assets/img/portfolio/geo1.jpg",
+      "./src/assets/img/portfolio/geo2.jpg",
+      "./src/assets/img/portfolio/geo3.jpg"
+    ],
+    "link": "https://www.geo-prof.com/",
+    "desc": "some description"
+  }
+]
