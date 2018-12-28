@@ -15,15 +15,17 @@ export class PortfolioComponent implements OnInit {
     showArrows: boolean = true;
     disableSwiping: boolean = false;
     autoPlay: boolean = false;
-    debug: boolean = false;
+    // autoPlayInterval: number = 3333;
+    // stopAutoPlayOnSlide: boolean = true;
+    // debug: boolean = false;
     backgroundSize: string = 'cover';
     backgroundPosition: string = 'center center';
     backgroundRepeat: string = 'no-repeat';
     showDots: boolean = true;
-    dotColor: string = '#FFF';
+    dotColor: string = '#fe6700';
     showCaptions: boolean = true;
     captionColor: string = '#FFF';
-    captionBackground: string = 'rgba(0, 0, 0, .35)';
+    captionBackground: string = 'rgba(0, 0, 0, .58)';
     lazyLoad: boolean = false;
     hideOnNoSlides: boolean = false;
     width: string = '100%';
@@ -39,7 +41,7 @@ export class PortfolioComponent implements OnInit {
       this.portfolioService.getPortfolioData()
         .subscribe((data: PortfolioData) => {
           this.portfolioData = data;
-          console.log(this.portfolioData);
+          this.fetchDataService.changeMessage(false);
         });
     }
 
