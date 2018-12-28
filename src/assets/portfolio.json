@@ -1,12 +1,45 @@
 [
   {
-    "title_site": "Geoproff",
+    "title_site": "ABM shelf",
+    "images": [
+      "./assets/img/portfolio/shelf1.jpg",
+      "./assets/img/portfolio/shelf2.jpg",
+      "./assets/img/portfolio/shelf3.jpg",
+      "./assets/img/portfolio/shelf4.jpg",
+      "./assets/img/portfolio/shelf5.jpg"
+    ],
+    "link": "https://abmcloud.com/en/abm-soft/shelf/",
+    "desc": "Merchandising service in stores. Shelf space optimization, planogram software, salesroom and planogram modelling, planogram efficiency analysis, retail space use analysis, planogram supervisory control, monitoring of dependence of the margin on goods placement. Automation of the management of the layout and trading room with ABM Shelf allows you to model the store's store in 3D, analyze sales, control the layout."
+  },
+  {
+    "title_site": "techninemedia",
+    "images": [
+      "./assets/img/portfolio/tech1.jpg",
+      "./assets/img/portfolio/tech2.jpg",
+      "./assets/img/portfolio/tech3.jpg",
+      "./assets/img/portfolio/tech4.jpg"
+    ],
+    "link": "https://techninemedia.com/en",
+    "desc": "Hi, we are techninemedia a digital-forward creative agency. We are crafting websites live up to their fullest potential. That’s it. And this is what we do and live daily with our fullest passion.When we are talking about \"design\" we don't mean just the graphics or a modern design style. We believe in true form aesthetics, usability, information architecture and also the intent behind it, as well as the experience of being exposed to it."
+  },
+  {
+    "title_site": "geo-prof",
     "images": [
       "./assets/img/portfolio/geo1.jpg",
       "./assets/img/portfolio/geo2.jpg",
       "./assets/img/portfolio/geo3.jpg"
     ],
     "link": "https://www.geo-prof.com/",
-    "desc": "some description"
+    "desc": "Engineering surveys in Moscow and the Moscow region - the main activity of the company \"Geo-Prof.\" During our work on the Russian market, our company has firmly occupied the niche of the leader in its field, offering customers the best combination of high quality services and affordable prices."
+  },
+  {
+    "title_site": "Deezium - Fom web to Deezer",
+    "images": [
+      "./assets/img/portfolio/deez1.jpg",
+      "./assets/img/portfolio/deez2.jpg",
+      "./assets/img/portfolio/deez3.jpg"
+    ],
+    "link": "https://chrome.google.com/webstore/detail/deezium-fom-web-to-deezer/cojmafafahcbhbpjnjfaiekpdjfbccdg?hl=en",
+    "desc": "This is Google extension. Take the music from everywhere to your Deezer playlists! This is an extension which adds a magic button to different websites with music content. It allows to quickly add tracksto your deezer playlists and in Loved Tracks. Currently we support: Shazam.com, SoundCloud.com, VK.com"
   }
 ]

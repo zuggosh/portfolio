@@ -10,6 +10,6 @@ export class FetchDataService {
   constructor() { }
 
   changeMessage(data: boolean) {
-      this.fetchData.next(data);
+    this.fetchData.next(data);
   }
 }
