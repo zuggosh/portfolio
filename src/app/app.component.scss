@@ -69,10 +69,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $black;
+    background-color: $addColor;
     color: white;
     height: 50px;
     position: relative;
+    background-image: url("../assets/img/header_bg.png");
+    background-size: cover;
   }
   &__content{
     display: flex;
@@ -84,8 +86,10 @@
     background-color: rgba(9,9,9,0.7);
     border-bottom: 1px solid $black;
     z-index: 5;
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.20) 50%,rgba(0,0,0,0.99) 99%,rgba(0,0,0,1) 100%);
   }
   &__languages{
+    display: none;
     position: absolute;
     left: 15px;
     z-index: 5;
