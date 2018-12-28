@@ -1,6 +1,6 @@
 [
   {
-    "title_site": "Geoproff",
+    "title_site": "geo-prof",
     "images": [
       "./assets/img/portfolio/geo1.jpg",
       "./assets/img/portfolio/geo2.jpg",
@@ -8,5 +8,39 @@
     ],
     "link": "https://www.geo-prof.com/",
     "desc": "some description"
+  },
+  {
+    "title_site": "techninemedia",
+    "images": [
+      "./assets/img/portfolio/tech1.jpg",
+      "./assets/img/portfolio/tech2.jpg",
+      "./assets/img/portfolio/tech3.jpg",
+      "./assets/img/portfolio/tech4.jpg"
+    ],
+    "link": "https://techninemedia.com/en",
+    "desc": "some description"
+  },
+  {
+    "title_site": "Deezium - Fom web to Deezer",
+    "images": [
+      "./assets/img/portfolio/deez1.jpg",
+      "./assets/img/portfolio/deez2.jpg",
+      "./assets/img/portfolio/deez3.jpg"
+    ],
+    "link": "https://chrome.google.com/webstore/detail/deezium-fom-web-to-deezer/cojmafafahcbhbpjnjfaiekpdjfbccdg?hl=en",
+    "desc": "This is Google extension. Take the music from everywhere to your Deezer playlists! This is an extension which adds a magic button to different websites with music content. It allows to quickly add tracksto your deezer playlists and in Loved Tracks. Currently we support: Shazam.com, SoundCloud.com, VK.com"
+  },
+  {
+    "title_site": "ABM shelf",
+    "images": [
+
+      "./assets/img/portfolio/shelf1.jpg",
+      "./assets/img/portfolio/shelf2.jpg",
+      "./assets/img/portfolio/shelf3.jpg",
+      "./assets/img/portfolio/shelf4.jpg",
+      "./assets/img/portfolio/shelf5.jpg"
+    ],
+    "link": "https://abmshelf.com/",
+    "desc": "ABM shelf Автоматизация управления выкладкой и другими элементами мерчандайзинга торгового зала, с помощью облачного сервиса ABM Shelf."
   }
 ]

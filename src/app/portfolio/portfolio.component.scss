@@ -3,7 +3,7 @@
 .portfolio{
   &__block{
     background-color: $black;
-    padding: 5px 15px 15px 15px;
+    padding: 5px 15px 25px 15px;
     margin: 0 15px 25px 0;
   }
   &__title{
@@ -12,7 +12,7 @@
     font-size: 22px;
     padding-right: 25px;
     margin: 15px 0 15px 15px;
-    //padding: 0 25px 2px 5px;
+    text-transform: capitalize;
     color: $white;
     border-bottom: 1px solid $addColor;
   }
@@ -26,7 +26,7 @@
     width: 32%;
   }
   &__linkBlock{
-    margin: 5px 0;
+    margin: 5px 0 15px 0;
   }
   &__link{
     display: inline-block;
