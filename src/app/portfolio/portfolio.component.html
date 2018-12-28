@@ -1,3 +1,35 @@
-<p>
-  portfolio works!
-</p>
+<div class="portfolio">
+  <div class="portfolio__block" *ngFor="let info of portfolioData">
+      <h1 class="portfolio__title">{{info.title_site}}</h1>
+      <div style="display:block;"
+           [style.width]="width">
+          <slideshow #slideshow
+                     [imageUrls]="info.images"
+                     [height]="height"
+                     [minHeight]="minHeight"
+                     [arrowSize]="arrowSize"
+                     [showArrows]="showArrows"
+                     [disableSwiping]="disableSwiping"
+                     [autoPlay]="autoPlay"
+                     [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+                     [debug]="debug"
+                     [backgroundSize]="backgroundSize"
+                     [backgroundPosition]="backgroundPosition"
+                     [backgroundRepeat]="backgroundRepeat"
+                     [showDots]="showDots"
+                     [dotColor]="dotColor"
+                     [showCaptions]="showCaptions"
+                     [captionColor]="captionColor"
+                     [captionBackground]="captionBackground"
+                     [lazyLoad]="lazyLoad"
+                     [hideOnNoSlides]="hideOnNoSlides">
+          </slideshow>
+          <div class="portfolio__linkBlock">
+            <a class="portfolio__link" href="{{info.link}}" target="_blank">Open site in new tab</a>
+          </div>
+          <div class="portfolio__desc">
+            {{info.desc}}
+          </div>
+      </div>
+  </div>
+</div>

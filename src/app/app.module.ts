@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient  } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -22,7 +23,6 @@ const appRoutes: Routes = [
     { path: 'news', component: NewsComponent},
     { path: 'portfolio', component: PortfolioComponent},
 ];
-
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -46,7 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    SlideshowModule
   ],
   providers: [
       NewsService,
