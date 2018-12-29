@@ -150,7 +150,11 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-
+  .aboutMe{
+    &__resumeBar{
+      font-size: 14px;
+    }
+  }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
