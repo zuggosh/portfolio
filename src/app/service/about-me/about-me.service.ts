@@ -19,8 +19,8 @@ export class AboutMeService {
   constructor(private http: HttpClient,
               private fetchDataService: FetchDataService) { }
 
-  serverUrl = 'https://salty-tundra-80705.herokuapp.com';
-  // serverUrl = 'http://localhost:3000';
+  // serverUrl = 'https://salty-tundra-80705.herokuapp.com';
+  serverUrl = 'http://localhost:3000';
   getAboutMe(): Observable<AboutMe> {
     // this.fetchDataService.changeMessage(true);
     return this.http.get(`${this.serverUrl}/api/post`).pipe(map(
