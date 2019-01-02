@@ -1,5 +1,5 @@
-<div class="portfolio">
-  <div class="portfolio__block" *ngFor="let info of portfolioData">
+<div class="portfolio" *ngIf="portfolioData">
+  <div class="portfolio__block" *ngFor="let info of portfolioData.post">
       <h1 class="portfolio__title">{{info.title_site}}</h1>
       <div style="display:block;"
            [style.width]="width">
