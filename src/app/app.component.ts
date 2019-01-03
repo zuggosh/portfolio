@@ -4,7 +4,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { FetchDataService } from './service/fetch-data/fetch-data.service';
 import { AboutMeService } from './service/about-me/about-me.service';
-import {News} from './service/news/news.service';
 
 class AppComponentModel {
     show: boolean;
@@ -34,7 +33,7 @@ export class AppComponent {
         translate.setDefaultLang('en');
     }
     ngOnInit() {
-        this.fetchDataService.currentMessage.subscribe(message => this.appComponentModel.spinnerShow = message);
+        this.fetchDataService.currentMessage.subscribe(bool => this.appComponentModel.spinnerShow = bool);
     }
 
     onSubmit () {

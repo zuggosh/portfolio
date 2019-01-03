@@ -9,7 +9,7 @@ export class FetchDataService {
   currentMessage = this.fetchData.asObservable();
   constructor() { }
 
-  changeMessage(data: boolean) {
-    this.fetchData.next(data);
+  changeMessage(bool: boolean) {
+    this.fetchData.next(bool);
   }
 }
