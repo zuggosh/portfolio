@@ -38,6 +38,7 @@ export class PortfolioComponent implements OnInit {
     }
 
     getPortfolioData() {
+      this.fetchDataService.changeMessage(true);
       this.portfolioService.getPortfolioData()
         .subscribe((data: PortfolioData) => {
           this.portfolioData = data;

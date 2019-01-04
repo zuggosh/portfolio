@@ -19,7 +19,7 @@ class AppComponentModel {
   providers: [AboutMeService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
     appComponentModel = new AppComponentModel();
     form: FormGroup;
     constructor(@Inject(FormBuilder) fb: FormBuilder,
