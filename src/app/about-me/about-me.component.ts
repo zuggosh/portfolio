@@ -20,9 +20,14 @@ export class AboutMeComponent implements OnInit {
     this.getAboutMeInfo();
   }
   slideToElement(element) {
-    document.getElementById(element).scrollIntoView({behavior: "smooth"});
+    document.getElementById(element).scrollIntoView(
+      {
+          behavior: 'smooth',
+          block: 'start'
+        });
   }
   getAboutMeInfo () {
+    this.fetchDataService.changeMessage(true);
     this.aboutMeService.getAboutMe()
         .subscribe((data: AboutMe) => {
             this.aboutMe = data;

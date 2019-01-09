@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 import { FetchDataService } from '../service/fetch-data/fetch-data.service';
 import { PortfolioService, PortfolioData } from '../service/portfolio/portfolio.service';
@@ -35,9 +35,26 @@ export class PortfolioComponent implements OnInit {
 
     ngOnInit() {
       this.getPortfolioData();
+      this.sizingSlider();
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.sizingSlider();
+    }
+
+    sizingSlider() {
+      if (window.innerWidth > 991) {
+        this.height = '400px';
+      } else if (window.innerWidth > 410) {
+        this.height = '300px';
+      } else {
+        this.height = '150px';
+      }
     }
 
     getPortfolioData() {
+      this.fetchDataService.changeMessage(true);
       this.portfolioService.getPortfolioData()
         .subscribe((data: PortfolioData) => {
           this.portfolioData = data;

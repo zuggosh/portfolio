@@ -56,6 +56,7 @@ export class NewsComponent implements OnInit {
   }
 
   showPressProof(countryCode, category, querySearch) {
+    this.fetchDataService.changeMessage(true);
     this.newsService.getPressProof(countryCode, category, querySearch)
       .subscribe((data: News) => {
         this.news = data;
