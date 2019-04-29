@@ -3,7 +3,8 @@
     "about_me": "обо мне",
     "news": "новости",
     "music": "музыка",
-    "portfolio": "портфолио"
+    "portfolio": "портфолио",
+    "training": "тренировка"
   },
   "FORM": {
     "phone": "телефон",

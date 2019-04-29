@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { NewsComponent } from './news/news.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TrainingComponent } from './training/training.component';
 
 
 import { NewsService } from './service/news/news.service';
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     { path: '', component: AboutMeComponent },
     { path: 'news', component: NewsComponent},
     { path: 'portfolio', component: PortfolioComponent},
+    { path: 'training', component: TrainingComponent}
 ];
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutMeComponent,
     NewsComponent,
     PortfolioComponent,
+    TrainingComponent,
   ],
   imports: [
     BrowserModule,

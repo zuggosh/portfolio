@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let item of mockData">
+    <h1>{{item.title}}</h1>
+    <div *ngFor="let exercise of item.exercises">
+      <span>{{exercise.name}}</span>
+      <span>{{exercise.wight}}</span>
+    </div>
+  </div>
+</div>

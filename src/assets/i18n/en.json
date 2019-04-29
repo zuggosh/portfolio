@@ -3,7 +3,8 @@
     "about_me": "about me",
     "news": "news",
     "music": "music",
-    "portfolio": "portfolio"
+    "portfolio": "portfolio",
+    "training": "training"
   },
   "FORM": {
     "phone": "phone",

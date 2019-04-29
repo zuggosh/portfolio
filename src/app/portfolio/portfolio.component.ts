@@ -15,9 +15,6 @@ export class PortfolioComponent implements OnInit {
     showArrows: boolean = true;
     disableSwiping: boolean = false;
     autoPlay: boolean = false;
-    // autoPlayInterval: number = 3333;
-    // stopAutoPlayOnSlide: boolean = true;
-    // debug: boolean = false;
     backgroundSize: string = 'cover';
     backgroundPosition: string = 'center center';
     backgroundRepeat: string = 'no-repeat';
