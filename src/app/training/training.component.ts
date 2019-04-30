@@ -8,7 +8,7 @@ import { FetchDataService } from '../service/fetch-data/fetch-data.service';
   styleUrls: ['./training.component.scss']
 })
 export class TrainingComponent implements OnInit {
-   public mockData: any;
+  public mockData: any;
   constructor(private fetchDataService: FetchDataService) {
     this.mockData = [
       {

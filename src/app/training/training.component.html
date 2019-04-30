@@ -2,8 +2,8 @@
   <div *ngFor="let item of mockData">
     <h1>{{item.title}}</h1>
     <div *ngFor="let exercise of item.exercises">
-      <span>{{exercise.name}}</span>
-      <span>{{exercise.wight}}</span>
+      <label for="{{exercise.name}}"></label>
+      <input id="{{exercise.name}}" type="text"/>
     </div>
   </div>
 </div>
