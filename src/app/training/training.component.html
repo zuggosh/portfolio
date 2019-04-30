@@ -1,9 +1,32 @@
-<div>
-  <div *ngFor="let item of mockData">
-    <h1>{{item.title}}</h1>
-    <div *ngFor="let exercise of item.exercises">
-      <label for="{{exercise.name}}"></label>
-      <input id="{{exercise.name}}" type="text"/>
+<div class="training">
+  <div class="training__block"
+       *ngFor="let item of mockData; index as i">
+    <h1 class="training__blockName">{{item.title}}</h1>
+    <div class="row">
+      <div class="training__exercise col-12 col-md-6"
+                          *ngFor="let exercise of item.exercises; index as j">
+        <div class="training__exerciseBlock">
+          <div class="training__exercise">
+            <label class="training__exerciseName"
+                   for="{{exercise.name}}">{{exercise.name}}</label>
+            <input id="{{exercise.name}}"
+                   class="training__exerciseInput"
+                   type="text"
+                   [(ngModel)]="exercise.wight"
+                   disabled />
+          </div>
+          <div class="training__nav">
+          <span class="training__btn"
+                (click)="changeValue(true, i, j)">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          </span>
+            <span class="training__btn"
+                  (click)="changeValue(false, i, j)">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+          </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

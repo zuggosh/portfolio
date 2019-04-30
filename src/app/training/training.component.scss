@@ -1,0 +1,61 @@
+@import "../variable";
+
+.training {
+  padding: 0 15px;
+  &__block {
+
+  }
+  &__blockName {
+    display: inline-block;
+    text-transform: capitalize;
+    color: $white;
+    border-bottom: 1px solid $addColor;
+  }
+  &__exerciseBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__exercise {
+    display: flex;
+    flex-direction: column;
+  }
+  &__exerciseName {
+    color: $greyLight;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  &__exerciseInput {
+    width: 100%;
+    color: $white;
+    font-family: fantasy;
+    background-color: transparent;
+    border: none;
+    font-size: 38px;
+    border-bottom: 1px solid $accentColor;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 25px;
+  }
+  &__btn {
+    padding: 5px 10px;
+    border: 1px solid $addColor;
+    border-radius: 5px;
+    cursor: pointer;
+    color: $addColor;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $addColor;
+      color: $black;
+    }
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+}

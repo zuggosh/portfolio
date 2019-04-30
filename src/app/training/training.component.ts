@@ -35,4 +35,8 @@ export class TrainingComponent implements OnInit {
     this.fetchDataService.changeMessage(false);
   }
 
+  changeValue(bool, i, j) {
+    bool ? this.mockData[i].exercises[j].wight += 5 : this.mockData[i].exercises[j].wight -= 5;
+  }
+
 }

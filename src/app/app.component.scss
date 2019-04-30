@@ -101,7 +101,7 @@
     margin-right: 4px;
     transition: text-shadow 0.2s ease;
     &:hover{
-      text-shadow: 0px 0px 0px rgba(255, 197, 24, 1);
+      text-shadow: 0 0 0 rgba(255, 197, 24, 1);
     }
     &.header__language--active{
       color: $addColor;
