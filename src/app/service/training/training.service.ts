@@ -16,7 +16,7 @@ export class TrainingService {
 
   getTrainingData(): Observable<TrainingData> {
     return this.http.get(`${this.serverUrl}/api/training`).pipe(map(
-      data => data
+      data => data[0].data
       ),
       catchError(err => {
         return throwError(err);

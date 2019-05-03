@@ -11,30 +11,9 @@ import { TrainingService } from '../service/training/training.service';
 export class TrainingComponent implements OnInit {
 
   private trainingData: object;
-  public mockData: any;
 
   constructor(private fetchDataService: FetchDataService,
-              private trainingService: TrainingService) {
-    this.mockData = [
-      {
-        title: 'chest',
-        exercises: [
-          {
-            name: 'gym dumbbells',
-            wight: 35
-          },
-          {
-            name: 'butterfly',
-            wight: 110
-          },
-          {
-            name: 'gym apparatus',
-            wight: 60
-          }
-        ]
-      }
-    ];
-  }
+              private trainingService: TrainingService) { }
 
   ngOnInit() {
     this.fetchDataService.changeMessage(false);
@@ -42,7 +21,7 @@ export class TrainingComponent implements OnInit {
   }
 
   changeValue(bool, i, j) {
-    bool ? this.mockData[i].exercises[j].wight += 5 : this.mockData[i].exercises[j].wight -= 5;
+    bool ? this.trainingData[i].exercises[j].wight += 5 : this.trainingData[i].exercises[j].wight -= 5;
   }
 
   getTrainingData() {
