@@ -11,6 +11,7 @@ import { TrainingService } from '../service/training/training.service';
 export class TrainingComponent implements OnInit {
 
   private trainingData: object;
+  private enableBtn = true;
 
   constructor(private fetchDataService: FetchDataService,
               private trainingService: TrainingService) { }
@@ -20,8 +21,13 @@ export class TrainingComponent implements OnInit {
     this.getTrainingData();
   }
 
-  changeValue(bool, i, j) {
-    bool ? this.trainingData[i].exercises[j].wight += 5 : this.trainingData[i].exercises[j].wight -= 5;
+  changeValue(bool, i) {
+    bool ? this.trainingData[i].weight += 5 : this.trainingData[i].weight -= 5;
+    this.enableBtn = false;
+    this.trainingService.updateTrainingData(this.trainingData[i]).subscribe((data) => {
+      this.enableBtn = true;
+      console.log(data);
+    });
   }
 
   getTrainingData() {

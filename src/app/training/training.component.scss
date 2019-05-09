@@ -45,11 +45,16 @@
   }
   &__btn {
     padding: 5px 10px;
+    background-color: transparent;
     border: 1px solid $addColor;
     border-radius: 5px;
     cursor: pointer;
     color: $addColor;
     transition: all 0.3s ease;
+    &:disabled {
+      color: lighten($addColor, 30%);
+      border-color: lighten($addColor, 30%);
+    }
     &:hover {
       background-color: $addColor;
       color: $black;
