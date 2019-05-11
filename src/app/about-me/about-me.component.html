@@ -1,21 +1,20 @@
 <div *ngIf="aboutMe" id="aboutMe" class="aboutMe">
 
   <ul id="aboutMeNav" class="aboutMe__navList">
-    <li *ngFor="let paragraph of aboutMe.post.paragraphs"
+    <li *ngFor="let paragraph of aboutMe.paragraphs"
         class="aboutMe__navItem">
       <a (click)="slideToElement(paragraph.name)" class="aboutMe__navLink"></a>
       <span class="aboutMe__navTitle">{{paragraph.name}}</span>
     </li>
   </ul>
 
-
-
   <div class="aboutMe__resumeBar">
     My resume (PDF format)
+    <!--todo change URI to service get file-->
     <a class="aboutMe__resumeBtn" href="https://salty-tundra-80705.herokuapp.com/api/pdf">download</a>
   </div>
 
-  <div *ngFor="let paragraph of aboutMe.post.paragraphs">
+  <div *ngFor="let paragraph of aboutMe.paragraphs">
     <h1 id={{paragraph.name}} class="aboutMe__title">{{paragraph.title}}</h1>
     <div class="aboutMe__descBlock">
 
