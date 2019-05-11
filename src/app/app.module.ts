@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HttpClient  } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SlideshowModule } from 'ng-simple-slideshow';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -18,13 +19,6 @@ import { NewsService } from './service/news/news.service';
 import { AboutMeService } from './service/about-me/about-me.service';
 import { FetchDataService } from './service/fetch-data/fetch-data.service';
 import { PortfolioService } from './service/portfolio/portfolio.service';
-
-const appRoutes: Routes = [
-    { path: '', component: AboutMeComponent },
-    { path: 'news', component: NewsComponent},
-    { path: 'portfolio', component: PortfolioComponent},
-    { path: 'training', component: TrainingComponent}
-];
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,11 +33,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrainingComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
+    // RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
