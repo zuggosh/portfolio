@@ -3,6 +3,7 @@ import {Observable, throwError} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {catchError, map} from 'rxjs/operators';
 
+// todo write normal model for data
 export interface TrainingData {
 }
 export interface TrainingDataUpdate {

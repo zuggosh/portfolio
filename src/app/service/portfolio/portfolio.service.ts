@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError} from 'rxjs/operators';
 
+// todo write normal model for data
 export interface PortfolioData {
 }
 

@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError} from 'rxjs/operators';
 
-// todo write normal model for data
 export interface AboutMe {
   paragraphs: ParagraphsAboutMe;
 }
@@ -17,9 +16,6 @@ interface SubParagraphsAboutMe {
   subDescription: string;
   subList?: any[];
   subTitle: string;
-}
-
-export interface MailMe {
 }
 
 
@@ -37,7 +33,7 @@ export class AboutMeService {
     ));
   }
 
-  mailMe (email: string, message: string): Observable<MailMe> {
+  mailMe (email: string, message: string): Observable<Object> {
     return this.http.post(`${this.serverUrl}/api/mail`, {
       mail: email,
       message: message

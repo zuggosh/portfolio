@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 // todo write normal model for data
 export interface News {
 }
-
 export interface NewsAssets {
     categories: any;
 }
