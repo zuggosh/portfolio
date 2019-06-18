@@ -34,7 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
