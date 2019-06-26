@@ -10,7 +10,7 @@ import { TrainingService } from '../service/training/training.service';
 })
 export class TrainingComponent implements OnInit {
 
-  private trainingData: object;
+  trainingData: object;
   private enableBtn = true;
 
   constructor(private fetchDataService: FetchDataService,
